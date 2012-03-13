@@ -17,11 +17,13 @@ def growl_message(message):
     name, address = email.utils.parseaddr(msg_from)
     msg_subject = message['Subject']
     # msg_date = dateparser(message['Date'])
+    msg_id = message['Message-id']
 
     message = '%s\n%s' % (name, msg_subject)
-    subprocess.check_call(['growlnotify',
+    subprocess.check_call(['/usr/local/bin/growlnotify',
                      '-m', message,
-                     '--image', imagefile])
+                     '--image', imagefile,
+                     '-d', msg_id])
 
 
 def main():

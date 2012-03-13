@@ -1,7 +1,8 @@
 MailDir Growl
 =============
 
-posts a [Growl](http://growl.info) notification whenever a new Mail is detected....
+posts a [Growl](http://growl.info) notification whenever a new Mail is detected.
+Lists sender and subject.
 
 usage:
 
