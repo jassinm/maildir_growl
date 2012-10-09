@@ -49,10 +49,9 @@ def main():
             type='float', dest='max_minutes', help='greater than this value prevents growl message')
     (options, args) = parser.parse_args()
 
+    max_age = 0
     if options.max_minutes:
         max_age = options.max_minutes
-    else:
-        max_age = 0
 
     if options.maildir:
         for file_ in os.listdir(options.maildir):
