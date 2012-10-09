@@ -35,8 +35,7 @@ def is_too_old(file_path, max_minutes):
     current_time = time.time()
     if ((current_time - file_time) / 60) > max_minutes:
         return True
-    else:
-        return False
+    return False
 
 
 def main():
